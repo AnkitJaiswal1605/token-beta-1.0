@@ -1,0 +1,351 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <title>Tokn Music</title>
+</head>
+<body> 
+  
+<!---------------------------------------- Navbar ---------------------------------------------------->
+
+    <div class="navbar">
+        <div class="left-navbar">
+            <!-- <image class="logo" alt="nav-icon" src="./images/hamburger.png"></image> -->
+            <image class="logo" alt="logo" src="./images/logo.png"></image>
+            <button class="beta">BETA</button>
+            <p class="nav-text">Marketplace</p>
+            <p class="nav-text">Whitepaper</p>
+        </div>
+        <div class="right-navbar">
+            <button id="btnConnect" class="signup-btn">Connect Wallet</button>
+        </div>
+    </div>
+
+<!---------------------------------------- Intro ---------------------------------------------------->
+
+    <div class="wrap wrapIntro">
+        <div class="introTextContainer">
+            <h1>The Music Marketplace</h1>
+            <p class="intro-p">Invest in music you love and collect the royalties from your favorite songs.</p>
+            <button class="orangeButton">Start Investing</button>
+        </div>
+        <image class="phones-img" alt="phones-img" src="./images/phones.png">
+    </div>
+
+<!---------------------------------------- Song List ---------------------------------------------------->
+
+    <div class="wrap wrapSongList">
+        <div class="card-container">
+            <div class="song-card">
+                <image class="song-img" alt="stevie" src="./images/stevie-1.jpg"></image>
+                <button class="song-status-btn queued-status-btn">0 Days - 2 Hours - 5 Minutes</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">Taken Aback</h3>
+                    <p class="artist-name">Stillzy</p>
+                </div>
+            </div>
+            <div class="song-card card-2">
+                <image class="song-img" alt="stevie" src="./images/stevie.jpg"></image>
+                <button class="song-status-btn live-status-btn">LIVE</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">In My Head</h3>
+                    <p class="artist-name">Stevie Flowers</p>
+                </div>
+            </div>
+            <div class="song-card card-3">
+                <div class="song-img">
+                    <div class="bar-container">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                    </div>
+                </div>
+                <button class="song-status-btn">COMING SOON</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">-</h3>
+                    <p class="artist-name">????</p>
+                </div>
+            </div>
+            <div class="song-card card-4">
+                <div class="song-img">
+                    <div class="bar-container">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                    </div>
+                </div>
+                <button class="song-status-btn">COMING SOON</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">-</h3>
+                    <p class="artist-name">????</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="show-all-btn">Show All</button>
+    </div>
+
+<!---------------------------------------- Vote ---------------------------------------------------->
+
+    <!-- <div class="wrap wrapVote">
+        <div class="voteContainer">
+            <div class="vote-left">
+                <h2 class="vote-header">Vote on the next artist.</h2>
+                <p class="vote-p">You decide the next big artist. Create an account and join the future of the music industry.</p>
+                <button class="create-account-btn">Create an Account</button>
+                <button class="vote-btn">VOTE HERE</button>
+            </div>
+            <p class="days-left">21 Days 7 Hours</p>
+            <div class="vote-right">
+                <div class="artist-div">
+                    <div class="artist-img"></div>
+                    <h3 class="new-artist-name">New Artist</h3>
+                </div>
+                <div class="artist-div-vote">
+                    <div class="artist-img"></div>
+                    <h3 class="new-artist-name">New Artist</h3>
+                </div>
+                <div class="artist-div">
+                    <div class="artist-img"></div>
+                    <h3 class="new-artist-name">New Artist</h3>
+                </div>
+                <p class="more-artists">+1 More Artists</p>
+            </div>
+        </div>
+    </div> -->
+
+<!---------------------------------------- About ---------------------------------------------------->
+
+    <div class="wrap wrapAbout">
+        <h1 class="about-header">WHAT IS TOKN MUSIC</h1>
+        <p class="about-p">Well, we are a...</p>
+
+        <div class="about-row">
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/launchpad.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Launchpad</h3>
+                    <p class="about-sub-text">Artists distribute their songs onto the top DSPs 
+                        and release tokens onto the marketplace.
+                    </p>
+                </div>
+            </div>
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/marketplace.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Marketplace</h3>
+                    <p class="about-sub-text">Buy, sell, trade, and exchange royalty shares via tokens 
+                        between investors.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-row">
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/order-matching.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Order Matching</h3>
+                    <p class="about-sub-text">Price discovery made easy through trading algorithms and limit orders.</p>
+                </div>
+            </div>
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/fungibility.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Fungibility</h3>
+                    <p class="about-sub-text">Tokens are fungible in price, meaning all tokens rise 
+                        and fall in price simultaneously.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-row">
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/fiat-payments.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Fiat Payments</h3>
+                    <p class="about-sub-text">Tokn Music enables payments and trading in USD and other fiat currencies.</p>
+                </div>
+            </div>
+            <div class="about-sub-div">
+                <image class="about-image" alt="about-image" src="./images/everybody-wins.png"></image>
+                <div class="about-text-container">
+                    <h3 class="about-sub-header">Everybody Wins</h3>
+                    <p class="about-sub-text">Anyone can invest in their favorite artist. Investors 
+                        win by helping artists thrive.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!---------------------------------------- Apply ---------------------------------------------------->
+
+    <div class="wrap wrapApply">
+        <image class="artist-apply-img" alt="artist" src="./images/artist-apply.jpg"></image>
+        <div class="apply-left">
+            <h2 class="artist-ad-header">Are you an artist?</h2>
+            <p class="artist-ad-p">Apply here to be a part of the Tokn Team and potentially get early access to join</p>
+            <h5 class="artist-ad-benefits">: Earn more</h5>
+            <h5 class="artist-ad-benefits">: Keep 100% of copyrights</h5>
+            <h5 class="artist-ad-benefits">: Back out at anytime</h5>
+            <h5 class="artist-ad-benefits">: Distribute everywhere</h5>
+        </div>
+        
+        <div class="apply-right">
+            <h3>Apply here:</h3>
+
+            <div class="name-details">
+                <div class="first-name-div">
+                    <label for="first-name-input" class="apply-label">First Name <span class="star">*</span></label>
+                    <input id="first-name-input" class="apply-input" type="text" placeholder="First Name" />
+                </div>
+                <div class="last-name-div">
+                    <label for="last-name-input" class="apply-label">Last Name <span class="star">*</span></label>
+                    <input id="last-name-input" class="apply-input" type="text" placeholder="Last Name" />
+                </div>
+            </div>
+
+            <div class="contact-details">
+                <div class="email-div">
+                    <label for="email-input" class="apply-label">Email <span class="star">*</span></label>
+                    <input id="email-input" class="apply-input" type="email" placeholder="artist@email.com" />
+                </div>
+                <div class="phone-div">
+                    <label for="phone-input" class="apply-label">Phone # <span class="star">*</span></label>
+                    <input id="phone-input" class="apply-input" type="number" placeholder="+0 (000) 123 - 4567" />
+                </div>
+            </div>
+
+            <div class="artist-apply-details">
+                <div class="stage-name-div">
+                    <label for="stage-name-input" class="apply-label">Stage Name <span class="star">*</span></label>
+                    <input id="stage-name-input" class="apply-input" type="text" placeholder="Lil Little" />
+                </div>
+                <div class="streams-div">
+                    <label for="streams-input" class="apply-label">Average Monthly Streams <span class="star">*</span></label>
+                    <input id="streams-input" class="apply-input" type="number" placeholder="10,000" />
+                </div>
+            </div>
+
+            <div class="spotify-url-div">
+                <label for="spotify-url-input" class="apply-label">Spotify URL <span class="star">*</span></label>
+                <input id="spotify-url-input" class="apply-input" type="url" placeholder="Https://..." />
+            </div>
+
+            <p class="apply-status-p">We will email you shortly with more details ;)</p>
+            <button class="apply-submit-btn">Submit</button>
+
+        </div>
+    </div>
+
+<!---------------------------------------- Media ---------------------------------------------------->
+
+    <!-- <div class="wrap wrapMedia">
+        <div class="card-container">
+            <div class="song-card">
+                <div class="song-img"></div>
+                <button class="song-status-btn">The next big step in Music</button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum laboriosam deserunt praesentium perferendis accusamus, </p>
+            </div>
+            <div class="song-card">
+                <div class="song-img"></div>
+                <button class="song-status-btn">The next big step in Music</button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum laboriosam deserunt praesentium perferendis accusamus, </p>
+            </div><div class="song-card">
+                <div class="song-img"></div>
+                <button class="song-status-btn">The next big step in Music</button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum laboriosam deserunt praesentium perferendis accusamus, </p>
+            </div>
+        </div>
+
+        <button class="load-more-link">Load More...</button>
+    </div> -->
+
+<!---------------------------------------- FAQ ---------------------------------------------------->
+
+    <div class="wrap wrapFaq">
+        <h2 class="faq-header">Frequently Asked Questions:</h2>
+        <hr class="hor-line">
+        <div class="single-faq">
+            <h5 class="faq-question">Why would an artist join Tokn Music?</h5>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <hr class="hor-line">
+
+        <div class="single-faq">
+            <h5 class="faq-question">When do token holders receive royalty payments?</h5>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <hr class="hor-line">
+
+        <div class="single-faq">
+            <h5 class="faq-question">How do tokens get lifetime royalties?</h5>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <hr class="hor-line">
+    </div>
+
+<!---------------------------------------- Footer ---------------------------------------------------->
+
+    <div class="wrap wrapFooter">
+        <div class="footer-1">
+            <div class="footer-badging">
+                <image class="footer-logo" alt="tokn-logo" src="./images/footer-logo.png"></image>
+                <h5 class="footer-tokn-badge">TOKN MUSIC</h5>
+            </div>
+            <p>Founded in 2021, Tokn Music seeks to unlock the potential of the music industry by bridging
+                connections and providing mutually beneficial value to all participating parties. Tokn Music
+                enables musicians to build additional sources of revenue by selling streaming royalties to fans
+                and investors through our order matching engined marketplace.
+            </p>
+            <div class="social-media-icons">
+                <image class="social-icon" alt="social-icon" src="./images/twitter.png"></image>
+                <image class="social-icon instagram" alt="social-icon" src="./images/insta.png"></image>
+                <image class="social-icon" alt="social-icon" src="./images/medium.png"></image>
+                <image class="social-icon linkedin" alt="social-icon" src="./images/linkedin.png"></image>
+            </div>
+        </div>
+        <div class="footer-2">
+            <h6 footer-header>Site Nav</h6>
+            <p>Marketplace</p>
+            <p>Home</p>
+            <p>Explanation</p>
+            <p>About Us</p>
+            <p>Create an Account</p>
+        </div>
+        <div class="footer-3">
+            <h6 footer-header>Resources</h6>
+            <p>Whitepaper</p>
+            <p>Pitch</p>
+            <p>Tokenomics</p>
+        </div>
+        <div class="footer-4">
+            <h6 footer-header>Contact</h6>
+            <p>support@toknmusic.com</p>
+            <p>1111 Address Street City, ST Country 00000</p>
+        </div>
+        <div class="terms-of-use">
+            <span class="trademark">&#xae;</span> Tokn Music is a Delaware C Corp, All Rights Reserved | <span class="blue-text">Terms of Use</span> | <span class="blue-text">Privacy Policy</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis@0.0.184/dist/moralis.js"></script>
+    <!-- <script src="abi.js"></script> -->
+    <script src="main.js"></script>
+
+</body>
+</html>

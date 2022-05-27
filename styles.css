@@ -1,0 +1,1374 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/****************************************** Navbar **************************************************/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 7rem;
+    background-color: rgba(255, 255, 255, 0.93);
+    color: black;
+    position: fixed;
+    z-index: 50;
+}
+
+.left-navbar {
+    display: flex;
+    margin-left: 8vw;
+    margin-top: 3rem;
+}
+
+.nav-text {
+    margin-right: 1.2rem;
+    cursor: pointer;
+    height: 1.2rem;
+}
+
+.nav-text:hover {
+    color: #00C9FF;
+}
+
+.logo {
+    position: relative;
+    bottom: 1.4rem;
+    right: 0.7rem;
+    
+}
+
+.beta {
+    background-color: rgba(0, 0, 0, 0.36);
+    border-style: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.6rem;
+    font-style: italic;
+    height: 1.2rem;
+    width: 3rem;
+    margin-right: 3rem;
+    letter-spacing: 1px;
+}
+
+.right-navbar {
+    display: flex;
+    margin-right: 9.3vw;
+    margin-top: 3rem;
+}
+
+.signup-btn {
+    background-color: black;
+    border-style: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.85);
+    width: 8rem;
+    height: 2rem;
+    position: relative;
+    bottom: 0.35rem;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .right-navbar {
+        display: none;
+    }
+    .left-navbar .nav-text {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+    }
+}
+
+/****************************************** Intro **************************************************/
+
+.wrapIntro {
+    background-image: linear-gradient(to left, #00C9FF 0%, #2FB2FF 38%, #2A8EFE 61%, #006DEF 100%);
+    position: relative;
+}
+
+.introTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    height: 30vh;
+    width: 33rem;
+    font-weight: 100 !important;
+    position: absolute;
+    left: 8vw;
+    margin-top: 8rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.intro-p {
+    font-size: 1.5rem;
+    font-weight: 350;
+    margin-top: 1rem;
+}
+
+.orangeButton {
+    background-color: #fcc017;
+    border-radius: 5px;
+    color: white;
+    width: 10rem;
+    min-height: 3rem;
+    border-style: none;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.phones-img {
+    width: 12rem;
+    position: absolute;
+    top: 0;
+    right: 12vw;
+}
+
+@media (max-width: 930px) {
+    .phones-img {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .introTextContainer {
+        width: 20rem;
+    }
+
+    .introTextContainer {
+        margin-top: 5rem;
+    }
+  }
+ 
+  
+/****************************************** Song List **************************************************/
+
+.wrapSongList {
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 84vw;
+    /* padding-left: 8vw;
+    padding-right: 8vw; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.song-card {
+    background-color: rgba(229, 229, 229, 0.65);
+    border-radius: 10px;
+    min-width: 15rem;
+    width: 20vw;
+    min-height: 24rem;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin: auto 0.7rem;
+    object-fit: contain;
+}
+
+.song-img {
+    min-width: 13rem;
+    width: 16vw;
+    min-height: 13rem;
+    height: 16vw;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-status-btn {
+    min-width: 13rem;
+    width: 16vw;
+    height: 1.5rem;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #adadad;
+    color: white;
+    font-size: 0.65rem;
+    padding-top: 2px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.live-status-btn {
+    background-color: #00d318;
+}
+
+.queued-status-btn {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color: black;
+}
+
+.song-details-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 16vw;
+}
+
+.artist-name {
+    font-size: 0.95rem;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 0.7rem;
+    background-color: rgba(229, 229, 229, 0.65);
+    height: 1.6rem;
+    margin-right: 0.15rem;
+    margin-left: 0.15rem;
+    border-radius: 3.5px;
+}
+
+.bar-2 {
+    height: 2.4rem;
+}
+
+.bar-3 {
+    height: 1rem;
+}
+
+.show-all-btn {
+    background-color: #333333;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 7px;
+    border-style: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 2px;
+    margin-top: 3rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1235px) {
+    .card-4 {
+        display: none;
+    }
+    .song-card {
+        width: 30vw;
+        height: 39vw;
+    }
+    .song-img {
+        width: 22vw;
+        height: 22vw;
+    }
+    .song-status-btn, .song-details-div {
+        width: 22vw;
+    }
+}
+
+@media (max-width: 920px) {
+    .card-3 {
+        display: none;
+    }
+    .song-card {
+        width: 40vw;
+        height: 55vw;
+    }
+    .song-img {
+        width: 34vw;
+        height: 34vw;
+    }
+    .song-status-btn, .song-details-div {
+        width: 34vw;
+    }
+}
+
+@media (max-width: 610px) {
+    .card-3, .card-4 {
+        display: flex;
+    }
+    .card-container {
+        width: 100vw;
+        margin-left: 16vw;
+        margin-right: 8vw;
+    }
+}
+
+
+/****************************************** Vote **************************************************/
+
+.voteContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    width: 75rem;
+    height: 28rem;
+    border-radius: 34px;
+    position: relative;
+}
+
+.vote-left {
+    width: 27rem;
+    position: absolute;
+    left: 3.5rem;
+}
+
+.vote-header {
+    font-size: 1.8rem;
+}
+
+.vote-p {
+    margin-top: 2rem;
+}
+
+.create-account-btn {
+    width: 27rem;
+    height: 2.5rem;
+    background-color: #6a6a6a;
+    border-style: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    font-weight: 600;
+}
+
+.vote-btn {
+    width: 27rem;
+    height: 2.5rem;
+    background-color: #12a4ff;
+    border-style: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.days-left {
+    position: absolute;
+    right: 3.5rem;
+    top: 2rem;
+    opacity: 0.6;
+}
+
+.vote-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 3.5rem;
+}
+
+.artist-div-vote {
+    width: 23rem;
+    height: 4.5rem;
+    border-style: solid;
+    border-color: rgb(18, 164, 255, 0.4);
+    border-radius: 7px;
+    margin: 0.5rem auto;
+    display: flex;
+    align-items: center;
+}
+
+.artist-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    background-color: #12a4ff;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+}
+
+.more-artists {
+    align-self: flex-start;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+/****************************************** About **************************************************/
+
+.wrapAbout {
+    flex-direction: column;
+    height: 160vh;
+    background-image: linear-gradient(270deg, #DC7BFF 0%, #B539FD 54%, #8B2AFC 100%);
+    border-radius: 50px;
+    color: white;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+}
+
+.about-p {
+    opacity: 0.7;
+}
+
+.about-row {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+.about-sub-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.16);
+    width: 40vw;
+    height: 13rem;
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+    border-radius: 20px;
+}
+
+.about-image {
+    width: 7rem;
+    margin-right: 2rem;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 4rem;
+}
+
+.about-sub-header {
+    font-size: 2rem;
+}
+
+.about-sub-text {
+    opacity: 0.7;
+    width: 18rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1400px) {
+    .about-text-container {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .about-text-container {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-image {
+        width: 6.5rem;
+    }
+    .about-sub-header {
+        font-size: 1.7rem;
+    }
+    .about-sub-text {
+        font-size: 1.1rem;
+    }
+    .about-sub-text {
+        width: 16rem;
+    }
+    .about-sub-div {
+        height: 12rem;
+    }
+}
+
+@media (max-width: 1170px) {
+    .about-image {
+        width: 6rem;
+    }
+    .about-sub-header {
+        font-size: 1.5rem;
+    }
+    .about-sub-text {
+        font-size: 1rem;
+    }
+    .about-sub-div {
+        height: 11rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    .about-image {
+        width: 5.5rem;
+    }
+    .about-sub-header {
+        font-size: 1.4rem;
+    }
+    .about-sub-text {
+        font-size: 0.9rem;
+    }
+    .about-sub-text {
+        width: 14.5rem;
+    }
+    .about-sub-div {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 970px) {
+    .about-image {
+        width: 5rem;
+    }
+    .about-sub-header {
+        font-size: 1.3rem;
+    }
+    .about-sub-text {
+        font-size: 0.9rem;
+    }
+    .about-sub-text {
+        width: 14.5rem;
+    }
+}
+
+@media (max-width: 970px) {
+    .about-image {
+        width: 4.5rem;
+    }
+    .about-sub-header {
+        font-size: 1.2rem;
+    }
+    .about-sub-text {
+        font-size: 0.9rem;
+    }
+    .about-sub-text {
+        width: 14.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-p {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+    .wrapAbout {
+        height: 240vh;
+        justify-content: center;
+    }
+    .about-row {
+        flex-direction: column;
+    }
+    .about-sub-div {
+        margin: 1rem auto;
+        width: 84vw;
+        height: 13rem;
+    }
+    .about-image {
+        width: 7rem;
+        margin-right: 4rem;
+    }
+    .about-sub-header {
+        font-size: 2rem;
+    }
+    .about-sub-text {
+        font-size: 1.2rem;
+        width: 20rem;
+    }
+    .about-text-container {
+        margin-right: 4rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-text-container {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-text-container {
+        margin-right: 0;
+    }
+    .about-image {
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-image {
+        width: 6rem;
+    }
+    .about-sub-header {
+        font-size: 1.7rem;
+    }
+    .about-sub-text {
+        font-size: 1.1rem;
+        width: 20rem;
+    }
+    .about-sub-div {
+        height: 10.5rem;
+    }
+    .wrapAbout {
+        height: 200vh;
+    }
+    .about-header {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .about-image {
+        width: 5.5rem;
+    }
+    .about-sub-header {
+        font-size: 1.5rem;
+    }
+    .about-sub-text {
+        font-size: 1rem;
+        width: 16rem;
+    }
+    .about-sub-div {
+        height: 10.5rem;
+    }
+}
+
+/****************************************** Apply **************************************************/
+
+.wrapApply {
+    background-color: white;
+    justify-content: center;
+}
+
+.apply-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2.5rem;
+    padding-right: 3.5rem;
+    padding-top: 4rem;
+    background-image: linear-gradient(180deg, #0080C400 0%, #00A7FFC5 61%, #00A7FF 100%);
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    min-width: 23rem;
+    max-width: 23rem;
+    min-height: 30rem;
+    margin-right: 10rem;
+    position: relative;
+    right: 11.5rem;
+    z-index: 10;
+}
+
+.artist-apply-img {
+    width: 23rem;
+    height: 30rem;
+    border-radius: 20px;
+    border-style: none;
+    position: relative;
+    left: 11.5rem;
+    z-index: 5;
+}
+
+.artist-ad-header {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    z-index: 30;
+}
+
+.artist-ad-p {
+    opacity: 0.9;
+    font-size: 0.9rem;
+    margin-bottom: 4.5rem;
+    z-index: 30;
+}
+
+.artist-ad-benefits {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    z-index: 30;
+}
+
+.apply-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 30rem;
+    position: relative;
+    right: 11.5rem;
+}
+
+.apply-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.star {
+    color: red;
+}
+
+.apply-input {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border-style: none;
+    height: 2.5rem;
+    width: 15rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    padding-left: 0.7rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+}
+
+.apply-input::placeholder {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.apply-input:focus {
+    outline: none;
+}
+
+.name-details, .contact-details, .artist-apply-details {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.first-name-div, .last-name-div, .email-div, .phone-div, .stage-name-div, .streams-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.spotify-url-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#spotify-url-input {
+    width: 31rem;
+}
+
+.apply-status-p {
+    font-style: italic;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    align-self: center;
+}
+
+.apply-submit-btn {
+    background-color: #12a4ff;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    width: 31rem;
+    min-height: 4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1100px) {
+    .wrapApply {
+        flex-direction: column;
+        height: 200vh;
+    }
+    .artist-apply-img {
+        left: 0;
+        top: 15rem;
+    }
+    .apply-left {
+        right: 0;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        bottom: 15rem;
+    }
+    .apply-right {
+        right: 0;
+        bottom: 15rem;
+    }
+    .apply-label {
+        margin-top: 1rem;
+    }
+    .apply-input {
+        width: 23rem;
+        margin-right: 0;
+    }
+    .name-details, .contact-details, .phone-div, .artist-apply-details {
+        flex-direction: column;
+    }
+    #spotify-url-input, .apply-submit-btn {
+        width: 23rem;
+    }
+    .apply-status-p {
+        margin: 1rem auto;
+    }
+}
+
+/****************************************** Media **************************************************/
+
+.wrapMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/****************************************** FAQ **************************************************/
+
+.wrapFaq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5vw;
+    height: 80vh;
+}
+
+.faq-header {
+    font-size: 1.7rem;
+    margin-left: 2.5vw;
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+}
+
+.hor-line {
+    width: 85vw;
+    height: 0.1rem;
+    background-color: black;
+    border-style: none;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    opacity: 0.3;
+}
+
+.single-faq {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    height: 6rem;
+    margin-left: 2.5vw;
+    
+}
+
+.faq-question {
+    font-weight: 600;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/****************************************** Footer **************************************************/
+
+.wrapFooter {
+    height: 70vh;
+    background-color: #212121;
+    position: relative;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer-1, .footer-2, .footer-3, .footer-4 {
+    position: absolute;
+    top: 6rem;
+}
+
+.footer-1 {
+    width: 21.5rem;
+    left: 8vw;
+}
+
+.footer-badging {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.footer-tokn-badge {
+    opacity: 0.95;
+}
+
+.footer-2 {
+    left: 34vw;
+}
+
+.footer-3 {
+    left: 48vw;
+}
+
+.footer-4 {
+    left: 62vw;
+}
+
+.footer-1 h5 {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+
+.footer-1 p {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-top: 4rem;
+    margin-right: 4rem;
+    line-height: 1rem;
+    letter-spacing: 0.7px;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+.instagram, .linkedin {
+    width: 1.2rem;
+}
+
+.footer-2, .footer-3, .footer-4 {
+    margin-right: 4rem;
+}
+
+.wrapFooter h6 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    margin-bottom: 1.8rem;
+    opacity: 0.9;
+}
+
+.footer-2 p, .footer-3 p, .footer-4 p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.terms-of-use {
+    position: absolute;
+    bottom: 4rem;
+    left: 8vw;
+    font-size: 0.65rem;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+}
+
+.trademark {
+    font-size: 1rem;
+    position: relative;
+    top: 0.1rem
+}
+
+.blue-text {
+    color: #12a4ff;
+}
+
+@media (max-width: 1350px) {
+    .footer-2, .footer-3, .footer-4 {
+        margin-right: 3rem;
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .footer-2, .footer-3, .footer-4 {
+        margin-right: 2rem;
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-1 p, .footer-2, .footer-3, .footer-4 {
+        display: none;
+    }
+    .footer-1 {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    .social-icon {
+        width: 2rem;
+    }
+    .instagram, .linkedin {
+        width: 1.6rem;
+    }
+    .social-media-icons {
+        margin-top: 4rem;
+    }
+    .terms-of-use {
+        width: 17rem;
+        left: 30vw;
+        bottom: 5rem;
+    }
+    .wrapFooter {
+        height: 50vh;
+    }
+}
+
+/****************************************** In My Head **************************************************/
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 40vw;
+    position: fixed;
+}
+
+.in-my-head-bg {
+    height: 100vh;
+    width: 40vw;
+    position: fixed;
+    filter: blur(7px);
+    z-index: 5;
+}
+
+.in-my-head-bg-2 {
+    height: 100vh;
+    width: 40vw;
+    position: fixed;
+    /* opacity: 0.4; */
+}
+
+.in-my-head-top-img {
+    height: 15vw;
+    width: 15vw;
+    min-width: 8rem;
+    min-height: 8rem;
+    position: fixed;
+    z-index: 10;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.8);
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.live-bar {
+    background-color: #c7e7ff;
+    opacity: 0.95;
+    position: fixed;
+    top: 7rem;
+    left: 40vw;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    z-index: 10;
+}
+
+.right-section {
+    width: 60vw;
+    position: relative;
+    top: 10rem;
+    left: 44vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.artist-div {
+    background-color: rgba(229, 229, 229, 0.65);
+    border-style: none;
+    width: 18rem;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 7px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.artist-dp {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin: auto 0.5rem;
+}
+
+.blue-emoji {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.artist-div-name {
+    font-size: 0.85rem;
+}
+
+.details-song-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+    margin: 0.5rem auto;
+}
+
+.table-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info {
+    margin: auto 0.5rem;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 900;
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    border-style: none;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.1rem;
+}
+
+.field-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.1rem;
+}
+
+.field-value {
+    margin-right: 0.5rem;
+}
+
+.blue-field {
+    color: #00A7FF;
+    font-weight: 600;
+}
+
+.buy-btn {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    width: 11rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.buying-terms {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    width: 20rem;
+    margin-bottom: 4rem;
+}
+
+.light-blue-text {
+    color: #006DEF;
+}
+
+.royalties-div {
+    height: 2.3rem;
+    width: 20rem;
+    background-color: rgba(229, 229, 229, 0.65);
+    border-radius: 5px;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.artist-info-text {
+    margin-top: 1rem;
+    width: 45rem;
+    opacity: 0.9;
+    margin-bottom: 9rem;
+}
+
+.recommended {
+    margin-bottom: 0.5rem;
+}
+
+.song-card-left {
+    margin-left: 0;
+}
+
+.footer-song-detail {
+    margin-top: 19rem;
+}
+
+/****************************************** Stevie Profile **************************************************/
+
+.dp-container {
+    width: 30vw;
+}
+
+.artist-top-img {
+    position: relative;
+    bottom: 7rem;
+    height: 15vw;
+    width: 15vw;
+    min-width: 8rem;
+    min-height: 8rem;
+    z-index: 10;
+}
+
+.artist-right-sec {
+    left: 32vw;
+    top: 8rem;
+}
+
+.right-artist-img {
+    bottom: 0;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .right-artist-img {
+        display: flex;
+        width: 50vw;
+        height: 50vw;
+        align-self: center;
+        position: relative;
+        right: 2rem;
+    }
+    .dp-container {
+        display: none;
+    }
+    .artist-right-sec {
+        left: 2rem;
+        width: 100vw;
+    }
+    .profile-artist-info {
+        min-width: 85vw;
+    }
+}
+
+.artist-div-white {
+    background-color: white;
+}
+
+.artist-name-large {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.profile-artist-info {
+    width: 59vw;
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.genres-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.genre-btn {
+    background-color: white;
+    width: 7rem;
+    height: 1.7rem;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgba(0, 0, 0, 0.36);
+    border-width: 1.5px;
+    margin-right: 1rem;
+    padding-top: 0.1rem;
+    font-weight: 600;
+}
+
+.yellow {
+    color: #987500;
+}
+
+.blue {
+    color: #005491;
+}
+
+.purple {
+    color: #a400cb;
+}
+
+.card-container-profile {
+    margin-top: 1rem;
+}
+
+/****************************************** Marketplace **************************************************/
+
+.banner {
+    width: 84vw;
+    height: 20rem;
+    margin-left: 8vw;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 9rem;
+    border-radius: 30px;
+}
+
+.marketplace-card-container {
+    margin-top: 5rem !important;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        margin-left: 0;
+        width: 100vw;
+        border-radius: 0;
+        top: 7rem;
+    }
+}
+
