@@ -16,6 +16,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    min-height: 40rem;
 }
 
 /****************************************** Navbar **************************************************/
@@ -39,6 +40,7 @@ body {
 
 .nav-text {
     margin-right: 1.2rem;
+    color: black;
     cursor: pointer;
     height: 1.2rem;
 }
@@ -47,11 +49,30 @@ body {
     color: #00C9FF;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 1.2rem !important;
+    height: 1rem;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ham-bar {
+    width: 1.2rem;
+    height: 0.1rem;
+    background-color: black;
+    opacity: 0.6;
+    display: none;
+}
+
 .logo {
     position: relative;
     bottom: 1.4rem;
-    right: 0.7rem;
-    
+    right: 0.3rem; 
+    width: 3.5rem;
 }
 
 .beta {
@@ -63,7 +84,7 @@ body {
     font-style: italic;
     height: 1.2rem;
     width: 3rem;
-    margin-right: 3rem;
+    margin-right: 1.7rem;
     letter-spacing: 1px;
 }
 
@@ -94,6 +115,14 @@ body {
     }
     .navbar {
         justify-content: center;
+    }
+    .hamburger {
+        display: flex;
+        left: 8vw;
+        top: 3rem;
+    }
+    .ham-bar {
+        display: flex;
     }
 }
 
@@ -136,6 +165,7 @@ h1 {
     border-style: none;
     font-size: 1rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .phones-img {
@@ -143,6 +173,92 @@ h1 {
     position: absolute;
     top: 0;
     right: 12vw;
+}
+
+.wrapMobileIntro, .wrapMobileIntro2 {
+    background-image: linear-gradient(to left, #00C9FF 0%, #2FB2FF 38%, #2A8EFE 61%, #006DEF 100%);
+    display: none;
+    width: 100vw !important;
+    height: 100vh;
+    min-height: 40rem;
+    align-items: center;
+}
+
+.close-navbar {
+    font-weight: 600;
+    width: 2.5rem;
+    position: absolute;
+    left: 8vw;
+    top: 4vw;
+    cursor: pointer;
+}
+
+.logo-mobile {
+    width: 4rem;
+    position: absolute;
+    top: 4vw;
+    left: 44vw;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100vw;
+}
+
+.menu h1 {
+    cursor: pointer;
+}
+
+.opacity-p {
+    opacity: 0.6;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    margin: 1rem auto;
+}
+
+.tbd-section {
+    position: relative;
+    right: 2rem;
+}
+
+.tbd-btn {
+    background-color: #fcc017;
+    color: white;
+    width: 3rem;
+    height: 1rem;
+    border-style: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+    position: relative;
+    bottom: 0.8rem;
+}
+
+.whitepaper-btn {
+    position: absolute;
+    width: 90vw;
+    height: 2.5rem;
+    padding-top: 4px;
+    left: 5vw;
+    bottom: 7vw;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.85);
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.waves {
+    position: absolute;
+    width: 100vw;
+    bottom: 0vw;
+    height: 50vh;
 }
 
 @media (max-width: 930px) {
@@ -199,6 +315,12 @@ h1 {
     position: relative;
     margin: auto 0.7rem;
     object-fit: contain;
+    color: black;
+}
+
+.card-1 {
+    min-width: 15rem !important;
+    width: 20vw !important;
 }
 
 .song-img {
@@ -231,6 +353,7 @@ h1 {
 
 .live-status-btn {
     background-color: #00d318;
+    cursor: pointer;
 }
 
 .queued-status-btn {
@@ -247,6 +370,8 @@ h1 {
     justify-content: center;
     align-items: flex-start;
     width: 16vw;
+    min-width: 13rem;
+    color: black;
 }
 
 .artist-name {
@@ -287,6 +412,7 @@ h1 {
     margin-top: 3rem;
     font-weight: 600;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 @media (max-width: 1235px) {
@@ -296,6 +422,9 @@ h1 {
     .song-card {
         width: 30vw;
         height: 39vw;
+    }
+    .card-1 {
+        width: 30vw !important;
     }
     .song-img {
         width: 22vw;
@@ -314,6 +443,9 @@ h1 {
         width: 40vw;
         height: 55vw;
     }
+    .card-1 {
+        width: 40vw !important;
+    }
     .song-img {
         width: 34vw;
         height: 34vw;
@@ -329,8 +461,8 @@ h1 {
     }
     .card-container {
         width: 100vw;
-        margin-left: 16vw;
-        margin-right: 8vw;
+        padding-left: 4vw;
+        padding-right: 8vw;
     }
 }
 
@@ -427,14 +559,29 @@ h1 {
 
 /****************************************** About **************************************************/
 
+.video-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 11.5vw;
+}
+
+.video {
+    width: 40vw;
+    min-width: 21rem;
+    height: 23vw;
+    min-height: 11.5rem;
+}
+
 .wrapAbout {
     flex-direction: column;
-    height: 160vh;
+    height: 75rem;
+    /* min-height: 70rem; */
     background-image: linear-gradient(270deg, #DC7BFF 0%, #B539FD 54%, #8B2AFC 100%);
     border-radius: 50px;
     color: white;
-    padding-bottom: 8rem;
-    padding-top: 8rem;
+    padding-bottom: 7rem;
+    padding-top: 15vw;
 }
 
 .about-p {
@@ -462,7 +609,7 @@ h1 {
 }
 
 .about-image {
-    width: 7rem;
+    width: 6rem;
     margin-right: 2rem;
 }
 
@@ -475,7 +622,7 @@ h1 {
 }
 
 .about-sub-header {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .about-sub-text {
@@ -499,10 +646,10 @@ h1 {
 
 @media (max-width: 1200px) {
     .about-image {
-        width: 6.5rem;
+        width: 5.5rem;
     }
     .about-sub-header {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
     .about-sub-text {
         font-size: 1.1rem;
@@ -513,14 +660,17 @@ h1 {
     .about-sub-div {
         height: 12rem;
     }
+    .wrapAbout {
+        min-height: 65rem;
+    }
 }
 
 @media (max-width: 1170px) {
     .about-image {
-        width: 6rem;
+        width: 5rem;
     }
     .about-sub-header {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .about-sub-text {
         font-size: 1rem;
@@ -528,14 +678,18 @@ h1 {
     .about-sub-div {
         height: 11rem;
     }
+    .wrapAbout {
+        height: 65rem;
+        min-height: 60rem;
+    }
 }
 
 @media (max-width: 1050px) {
     .about-image {
-        width: 5.5rem;
+        width: 4.5rem;
     }
     .about-sub-header {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     .about-sub-text {
         font-size: 0.9rem;
@@ -546,14 +700,18 @@ h1 {
     .about-sub-div {
         height: 10rem;
     }
+    .wrapAbout {
+        height: 60rem;
+        min-height: 55rem;
+    }
 }
 
 @media (max-width: 970px) {
     .about-image {
-        width: 5rem;
+        width: 4rem;
     }
     .about-sub-header {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .about-sub-text {
         font-size: 0.9rem;
@@ -563,29 +721,19 @@ h1 {
     }
 }
 
-@media (max-width: 970px) {
-    .about-image {
-        width: 4.5rem;
-    }
-    .about-sub-header {
-        font-size: 1.2rem;
-    }
-    .about-sub-text {
-        font-size: 0.9rem;
-    }
-    .about-sub-text {
-        width: 14.5rem;
-    }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 880px) {
     .about-p {
         margin-bottom: 3rem;
         margin-top: 2rem;
     }
     .wrapAbout {
-        height: 240vh;
+        height: 250vh;
         justify-content: center;
+        min-height: 48rem;
+        padding-top: 13rem;
+    }
+    .video-container {
+        height: 6.25rem;
     }
     .about-row {
         flex-direction: column;
@@ -596,14 +744,14 @@ h1 {
         height: 13rem;
     }
     .about-image {
-        width: 7rem;
+        width: 6rem;
         margin-right: 4rem;
     }
     .about-sub-header {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .about-sub-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
         width: 20rem;
     }
     .about-text-container {
@@ -628,10 +776,10 @@ h1 {
 
 @media (max-width: 600px) {
     .about-image {
-        width: 6rem;
+        width: 5rem;
     }
     .about-sub-header {
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
     .about-sub-text {
         font-size: 1.1rem;
@@ -641,7 +789,8 @@ h1 {
         height: 10.5rem;
     }
     .wrapAbout {
-        height: 200vh;
+        height: 95rem !important;
+        padding-top: 13rem;
     }
     .about-header {
         font-size: 2.5rem;
@@ -650,10 +799,10 @@ h1 {
 
 @media (max-width: 550px) {
     .about-image {
-        width: 5.5rem;
+        width: 4.5rem;
     }
     .about-sub-header {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .about-sub-text {
         font-size: 1rem;
@@ -661,6 +810,53 @@ h1 {
     }
     .about-sub-div {
         height: 10.5rem;
+    }
+    .about-header {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-image {
+        width: 4rem;
+        margin-right: 1.5rem;
+    }
+    .about-sub-header {
+        font-size: 1rem;
+    }
+    .about-sub-text {
+        font-size: 0.9rem;
+        width: 12rem;
+    }
+    .about-sub-div {
+        height: 10.5rem;
+    }
+    .wrapAbout {
+        height: 95rem !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .about-image {
+        width: 4rem;
+        margin-right: 1.5rem;
+    }
+    .about-sub-header {
+        font-size: 1rem;
+    }
+    .about-sub-text {
+        font-size: 0.9rem;
+        width: 11rem;
+    }
+    .about-sub-div {
+        height: 10rem;
+    }
+    .wrapAbout {
+        height: 95rem !important;
+    }
+    .video {
+        min-width: 18rem;
+        min-height: 13rem;
     }
 }
 
@@ -853,11 +1049,11 @@ h1 {
     align-items: flex-start;
     justify-content: center;
     padding-left: 5vw;
-    height: 80vh;
+    height: 130vh;
 }
 
 .faq-header {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-left: 2.5vw;
     margin-bottom: 2.5rem;
     opacity: 0.8;
@@ -878,15 +1074,47 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width: 80vw;
-    height: 6rem;
+    height: 4rem;
     margin-left: 2.5vw;
     
 }
 
 .faq-question {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     opacity: 0.8;
+}
+
+.fa-angle-down {
+    cursor: pointer;
+}
+
+.faq-answer {
+    width: 45vw;
+    min-width: 15rem;
+    margin-left: 2.5vw;
+    margin-bottom: 1.5rem;
+    display: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+}
+
+.angle-up {
+    transform: rotate(180deg);
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .faq-question {
+        font-size: 1rem;
+    }
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+    .faq-header {
+        font-size: 1.4rem !important;
+    }
 }
 
 /****************************************** Footer **************************************************/
@@ -900,11 +1128,13 @@ h1 {
     justify-content: center;
     align-items: center;
     color: white;
+    z-index: 11;
 }
 
 .footer-1, .footer-2, .footer-3, .footer-4 {
     position: absolute;
     top: 6rem;
+    /* font-size: 2rem !important; */
 }
 
 .footer-1 {
@@ -928,27 +1158,31 @@ h1 {
 }
 
 .footer-2 {
-    left: 34vw;
+    left: 42vw;
 }
 
 .footer-3 {
-    left: 48vw;
+    left: 62vw;
 }
+
+.footer-2 p:hover, .footer-3 p:hover {
+    opacity: 1;
+} 
 
 .footer-4 {
     left: 62vw;
 }
 
 .footer-1 h5 {
-    font-size: 1.3rem;
+    font-size: 2rem;
     letter-spacing: 3px;
 }
 
 .footer-1 p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     opacity: 0.6;
     margin-top: 4rem;
-    margin-right: 4rem;
+    margin-right: 2rem;
     line-height: 1rem;
     letter-spacing: 0.7px;
 }
@@ -982,16 +1216,29 @@ h1 {
 }
 
 .footer-2 p, .footer-3 p, .footer-4 p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.6;
     margin-bottom: 1rem;
 }
 
+.support-email {
+    position: absolute;
+    bottom: 16.2rem;
+    left: 42vw;
+    font-size: 1rem;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+}
+
+.support-email:hover {
+    opacity: 1;
+}
+
 .terms-of-use {
     position: absolute;
-    bottom: 4rem;
-    left: 8vw;
-    font-size: 0.65rem;
+    bottom: 4rem !important;
+    left: 8vw !important;
+    font-size: 0.7rem;
     opacity: 0.6;
     letter-spacing: 0.6px;
 }
@@ -999,7 +1246,7 @@ h1 {
 .trademark {
     font-size: 1rem;
     position: relative;
-    top: 0.1rem
+    top: 0.1rem;
 }
 
 .blue-text {
@@ -1007,21 +1254,21 @@ h1 {
 }
 
 @media (max-width: 1350px) {
-    .footer-2, .footer-3, .footer-4 {
+    .footer-2, .footer-3, .footer-4, .support-email {
         margin-right: 3rem;
         margin-left: 2rem;
     }
 }
 
 @media (max-width: 1100px) {
-    .footer-2, .footer-3, .footer-4 {
+    .footer-2, .footer-3, .footer-4, .support-email {
         margin-right: 2rem;
         margin-left: 3rem;
     }
 }
 
 @media (max-width: 1000px) {
-    .footer-1 p, .footer-2, .footer-3, .footer-4 {
+    .footer-1 p, .footer-2, .footer-3, .footer-4, .support-email {
         display: none;
     }
     .footer-1 {
@@ -1030,6 +1277,7 @@ h1 {
         flex-direction: column;
         align-items: center;
         margin-bottom: 5rem;
+        width: 100vw;
     }
     .social-icon {
         width: 2rem;
@@ -1041,16 +1289,23 @@ h1 {
         margin-top: 4rem;
     }
     .terms-of-use {
-        width: 17rem;
-        left: 30vw;
-        bottom: 5rem;
+        width: 100vw;
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    .terms-container {
+        width: 18rem;
+        text-align: center;
     }
     .wrapFooter {
         height: 50vh;
+        flex-direction: column !important;
     }
 }
 
-/****************************************** In My Head **************************************************/
+/****************************************** In Circles **************************************************/
 
 .image-container {
     display: flex;
@@ -1061,7 +1316,12 @@ h1 {
     position: fixed;
 }
 
-.in-my-head-bg {
+.image-container2 {
+    display: none;
+    position: fixed;
+}
+
+.in-circles-bg {
     height: 100vh;
     width: 40vw;
     position: fixed;
@@ -1069,24 +1329,26 @@ h1 {
     z-index: 5;
 }
 
-.in-my-head-bg-2 {
+.in-circles-bg-2 {
     height: 100vh;
     width: 40vw;
     position: fixed;
     /* opacity: 0.4; */
 }
 
-.in-my-head-top-img {
-    height: 15vw;
-    width: 15vw;
+.in-circles-top-img {
+    height: 25vw;
+    width: 25vw;
     min-width: 8rem;
     min-height: 8rem;
-    position: fixed;
+    position: absolute;
+    top: 12rem;
     z-index: 10;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.8);
     border-width: 5px;
     border-radius: 10px;
+    margin-top: 3rem;
 }
 
 .live-bar {
@@ -1104,7 +1366,7 @@ h1 {
 }
 
 .right-section {
-    width: 60vw;
+    width: 50vw;
     position: relative;
     top: 10rem;
     left: 44vw;
@@ -1116,6 +1378,7 @@ h1 {
 .artist-div {
     background-color: rgba(229, 229, 229, 0.65);
     border-style: none;
+    color: black;
     width: 18rem;
     height: 4rem;
     display: flex;
@@ -1230,15 +1493,33 @@ a {
     margin-bottom: 4rem;
 }
 
+.song-social-icons {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.7rem !important;
+}
+
 .artist-info-text {
-    margin-top: 1rem;
-    width: 45rem;
+    width: 47.5vw;
     opacity: 0.9;
-    margin-bottom: 9rem;
+    margin-bottom: 7rem;
+    color: black;
+}
+
+/* .song-artist-info {
+    margin-bottom: 18rem;
+} */
+
+.fa-spotify, .fa-twitter, .fa-instagram {
+    color: black;
 }
 
 .recommended {
     margin-bottom: 0.5rem;
+}
+
+.song-card-container {
+    margin-bottom: 16rem;
+    margin-top: 1rem;
 }
 
 .song-card-left {
@@ -1249,6 +1530,65 @@ a {
     margin-top: 19rem;
 }
 
+.wrapSongFooter {
+    top: 10rem;
+}
+
+@media (max-width: 650px) {
+    .image-container {
+        display: none;
+    }
+    .image-container2 {
+        display: flex;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .right-section {
+        left: 0vw;
+        top: 150vw;
+        padding-left: 8vw;
+        width: 100vw;
+    }
+    .in-circles-bg {
+        height: 115vw;
+        width: 100vw;
+        position: absolute;
+        top: 10rem;
+    }
+    .in-circles-bg-2 {
+        display: flex;
+        height: 115vw;
+        width: 100vw;
+        position: absolute;
+        top: 10rem;
+    }
+    .live-bar {
+        width: 100vw;
+        left: 0vw;
+        z-index: 20;
+    }
+    .in-circles-top-img {
+        width: 70vw;
+        height: 70vw;
+        position: absolute;
+        top: 50vw;
+    }
+    .table-row {
+        width: 82vw;
+    }
+    /* .buying-terms {
+        width: 18rem;
+    } */
+    .artist-info-text {
+        width: 75vw;
+    }
+    .wrapSongFooter {
+        top: 150vw;
+    }
+}
+
 /****************************************** Stevie Profile **************************************************/
 
 .dp-container {
@@ -1256,13 +1596,15 @@ a {
 }
 
 .artist-top-img {
-    position: relative;
-    bottom: 7rem;
+    position: absolute;
+    top: 11rem;
     height: 15vw;
+    left: 3rem;
     width: 15vw;
     min-width: 8rem;
     min-height: 8rem;
     z-index: 10;
+    border-radius: 100%;
 }
 
 .artist-right-sec {
@@ -1275,29 +1617,43 @@ a {
     display: none;
 }
 
+.profile-artist-info {
+    margin-top: 1rem;
+}
+
 @media (max-width: 650px) {
+    
     .right-artist-img {
         display: flex;
         width: 50vw;
         height: 50vw;
         align-self: center;
-        position: relative;
-        right: 2rem;
+        margin-right: 1rem;
+        min-width: 8rem;
+        min-height: 8rem;
+        z-index: 10;
+        border-radius: 100%;
     }
     .dp-container {
         display: none;
     }
     .artist-right-sec {
-        left: 2rem;
+        left: 0rem;
         width: 100vw;
+        padding-left: 8vw;
     }
     .profile-artist-info {
-        min-width: 85vw;
+        min-width: 75vw;
+    }
+    .genre-btn {
+        width: 5rem !important;
+        font-size: 0.75rem;
     }
 }
 
 .artist-div-white {
     background-color: white;
+    margin-bottom: 0;
 }
 
 .artist-name-large {
@@ -1305,10 +1661,27 @@ a {
     font-weight: 400;
 }
 
+.profile-social-media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.fa-spotify, .fa-twitter, .fa-instagram {
+    font-size: 2.5rem;
+    padding-right: 1rem !important;
+}
+
 .profile-artist-info {
     width: 59vw;
     margin-bottom: 1.5rem;
     display: flex;
+}
+
+.artist-info-header {
+    font-size: 1.3rem;
 }
 
 .genres-div {
@@ -1331,6 +1704,10 @@ a {
     font-weight: 600;
 }
 
+.purple {
+    margin-right: 0;
+}
+
 .yellow {
     color: #987500;
 }
@@ -1343,32 +1720,154 @@ a {
     color: #a400cb;
 }
 
+.releases-profile {
+    font-size: 1.3rem;
+}
+
 .card-container-profile {
     margin-top: 1rem;
+    margin-bottom: 12rem;
+}
+
+.song-card-profile {
+    min-width: 15rem !important;
+    width: 20vw !important;
+    min-height: 24rem !important;
+    height: 30vw !important;
+}
+
+@media (max-width: 1235px) {
+    .song-card-profile {
+        min-width: 15rem !important;
+        width: 20vw !important;
+        min-height: 24rem !important;
+        height: 30vw !important;
+    }
+    .song-img-profile {
+        min-width: 13rem !important;
+        width: 16vw !important;
+        min-height: 13rem !important;
+        height: 16vw !important;
+    }
+    .song-status-btn-profile, .song-details-div-profile {
+        min-width: 13rem !important;
+        width: 16vw !important;
+        height: 1.5rem !important;
+    }
+}
+
+@media (max-width: 920px) {
+    .song-card-profile {
+        min-width: 15rem !important;
+        width: 20vw !important;
+        min-height: 24rem !important;
+        height: 30vw !important;
+    }
+    .song-img-profile {
+        min-width: 13rem !important;
+        width: 16vw !important;
+        min-height: 13rem !important;
+        height: 16vw !important;
+    }
+    .song-status-btn-profile, .song-details-div-profile {
+        min-width: 13rem !important;
+        width: 16vw !important;
+        height: 1.5rem !important;
+    }
 }
 
 /****************************************** Marketplace **************************************************/
 
 .banner {
     width: 84vw;
-    height: 20rem;
+    height: 25rem;
     margin-left: 8vw;
-    margin-bottom: 1rem;
+    margin-bottom: 9rem;
     position: relative;
     top: 9rem;
     border-radius: 30px;
+    background: url("./images/stevie-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-layer {
+    width: 84vw;
+    height: 25rem;
+    margin-left: 8vw;
+    margin-bottom: 9rem;
+    position: relative;
+    margin-top: -25rem;
+    border-radius: 30px;
+    background-image: linear-gradient(180deg, #00000080 30%, #00000065 70%, #00000020 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-name {
+    color: white;
+    font-size: 2.7rem;
+    text-shadow: 4px 4px 8px #00000080;
+}
+
+.banner-song {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 6px 6px 8px #00000080;
+}
+
+.banner-btn {
+    background-color: black;
+    color: white;
+    width: 7rem;
+    height: 2rem;
+    font-weight: 600;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: white;
+    border-radius: 7px;
+    margin-top: 3rem;
+    opacity: 0.95;
+}
+
+.banner-btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.wrapMarketplaceCards {
+    height: 80vh !important;
+    min-height: 10vh;
 }
 
 .marketplace-card-container {
-    margin-top: 5rem !important;
+    position: relative;
+    bottom: 6rem;
 }
 
 @media (max-width: 900px) {
-    .banner {
+    .banner, .banner-layer {
         margin-left: 0;
         width: 100vw;
         border-radius: 0;
-        top: 7rem;
+    }
+    .banner-song {
+        font-size: 4rem;
+    }
+    .banner-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .banner-song {
+        font-size: 3.5rem;
+    }
+    .banner-name {
+        font-size: 1.8rem;
     }
 }
 

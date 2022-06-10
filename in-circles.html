@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    <title>Stevie Flowers</title>
+<title>In Circles</title>
 </head>
 <body>
   
 <!---------------------------------------- Navbar ---------------------------------------------------->
 
-<div id="navbar" class="navbar">
-    <div class="hamburger" onclick="mobileNavbarOpen()">
+<div id="navbar2" class="navbar">
+    <div class="hamburger" onclick="mobileNavbarOpen2()">
         <div class="ham-bar"></div>
         <div class="ham-bar"></div>
         <div class="ham-bar"></div>
@@ -38,12 +38,12 @@
 
 <!---------------------------------------- Image Section ---------------------------------------------------->
 
-<div id="mobile-intro" class="wrapMobileIntro">
-    <image class="close-navbar" alt="close" src="./images/close-icon.png" onclick="mobileNavbarClose()"></image>
-    <image class="logo-mobile" alt="logo" src="./images/logo-white-bg.png" onclick="mobileNavbarClose()"></image>
+<div id="mobile-intro2" class="wrapMobileIntro">
+    <image class="close-navbar" alt="close" src="./images/close-icon.png" onclick="mobileNavbarClose2()"></image>
+    <image class="logo-mobile" alt="logo" src="./images/logo-white-bg.png" onclick="mobileNavbarClose2()"></image>
     <image class="waves" alt="waves" src="./images/waves.png"></image>
     <div class="menu">
-        <h1 onclick="mobileNavbarClose()">HOME</h1>
+        <h1 onclick="mobileNavbarClose2()">HOME</h1>
         <a href="marketplace.html"><h1>MARKETPLACE</h1></a>
         <h1 class="tbd-section"><button class="tbd-btn">TBD</button><span class="opacity-p">LIBRARY</span></h1>
         <h1 class="tbd-section"><button class="tbd-btn">TBD</button><span class="opacity-p">ABOUT</span></h1>
@@ -53,53 +53,112 @@
     </a>
 </div>    
 
-<div class="image-container dp-container">
-        <image class="artist-top-img" alt="stevie" src="./images/stevie-profile-pic.jpg"></image>
-    </div>
+<div class="hide image-container">
+    <image class="in-circles-bg" alt="stevie" src="./images/in-circles-bg.png"></image>
+    <image class="in-circles-bg-2" alt="stevie" src="./images/in-circles-bg-2.png"></image>
+    <image class="in-circles-top-img" alt="stevie" src="./images/in-circles-top-img.png"></image>
+</div>
 
 <!---------------------------------------- Right Section ---------------------------------------------------->
 
-    <div class="right-section artist-right-sec">
-        <image class="right-artist-img" alt="stevie" src="./images/stevie-profile-pic.jpg"></image>
-        <div class="artist-div artist-div-white">
+    <div class="hide live-bar">LIVE</div>
+
+    <div class="hide image-container2">
+        <image class="in-circles-bg" alt="stevie" src="./images/in-circles-bg.png"></image>
+        <image class="in-circles-bg-2" alt="stevie" src="./images/in-circles-bg-2.png"></image>
+        <image class="in-circles-top-img" alt="stevie" src="./images/in-circles-top-img.png"></image>
+    </div>
+
+    <div class="hide right-section">
+        <a href="stevie.html"><div class="artist-div">
+            <image class="artist-dp" alt="stevie" src="./images/stevie-profile-pic.jpg"></image>
             <image class="blue-emoji" alt="emoji" src="./images/blue-emoji.png"></image>
-            <h5 class="artist-div-name artist-name-large">Stevie Flowers</h5>
+            <p class="artist-div-name">Stevie Flowers</p>
+        </div></a>
+
+        <h2 class="hide details-song-title">In Circles</h2>
+
+        <div class="hide details-table">
+            <div class="table-row">
+                <div class="table-left">
+                    <span class="info">i</span>
+                    <p class="field-name">Price per Token:</p>
+                </div>
+                <p class="field-value blue-field">$2.00</p>
+            </div>
+            <hr class="table-hor-line">
+
+            <div class="table-row">
+                <div class="table-left">
+                    <span class="info">i</span>
+                    <p class="field-name">Total Quantity:</p>
+                </div>
+                <p class="field-value">500</p>
+            </div>
+            <hr class="table-hor-line">
+
+            <div class="table-row">
+                <div class="table-left">
+                    <span class="info">i</span>
+                    <p class="field-name">Total Royalty %:</p>
+                </div>
+                <p class="field-value">10%</p>
+            </div>
+            <hr class="table-hor-line">
+
+            <div class="table-row">
+                <div class="table-left">
+                    <span class="info">i</span>
+                    <p class="field-name">Royalty % per Token:</p>
+                </div>
+                <p class="field-value">0.02%</p>
+            </div>
         </div>
-        <div class="profile-social-media">
+
+        <a href="https://opensea.io/assets/matic/0x6d04fc16e2ef2bc8d86afa0a1fa9bb6cb696e951/0"><button id="buy-btn" class="hide buy-btn">Buy</button></a>
+
+        <p class="hide buying-terms">By clicking 'Buy', you acknowledge and adhere to our 
+            <span class="light-blue-text">Terms of Service, Purchaser's Agreement,
+            </span> and all other <span class="light-blue-text">Legal</span>.
+        </p>
+
+        <div class="hide royalties-div">ROYALTIES WILL BEGIN SENDING AFTER BETA</div>
+
+        <h3 class="hide artist-info-header">Artist Info:</h3>
+        <div class="hide profile-social-media song-social-icons">
             <a href="https://open.spotify.com/artist/7DmReHOrDivUmYnhNpuqQN?si=i5EBgC0KSDiD-54IjO_3QA&nd=1"><i class="fab fa-spotify"></i></a>
             <!-- <a href=""><i class="fab fa-twitter"></i></a> -->
             <a href="https://www.instagram.com/steviepicksflowers/?igshid=NmZiMzY2Mjc%3D"><i class="fab fa-instagram"></i></a>
         </div>
-
-        <h3 class="artist-info-header">Artist Info:</h3>
-
-        <p class="artist-info-text profile-artist-info">
+        <p class="hide artist-info-text song-artist-info">
             Indie musician and Pittsburgh native Stevie Flowers is a producer, songwriter, and artist that has broken out of 2021 swinging. His intimate and relatable lyrics create an atmosphere of honesty and introspection with inspirations from 80’s New Wave and Backpack rap bleeding into his production and lyrics. Bridging the gap between the sounds of vintage and modern, Flowers has a grass-roots following from indie fans and media outlets alike. Since 2021, the evolution of Flowers’ discography and connections in the industry lead to a collaboration with Tokn Music where he will be releasing his long-awaited single ‘In Circles’.
         </p>
 
-        <div class="genres-div">
-            <button class="genre-btn yellow">HYPERPOP</button>
-            <button class="genre-btn blue">PUNK</button>
-            <button class="genre-btn purple">CHILL</button>
-        </div>
-
-        <h3 class="recommended releases-profile">Releases:</h3>
-        <div class="card-container-profile">
-            <a href="in-circles.html"><div class="song-card song-card-left song-card-profile">
-                <image class="song-img song-img-profile" alt="stevie" src="./images/in-circles-bg.png"></image>
-                <button class="song-status-btn song-status-btn-profile live-status-btn">LIVE</button>
-                <div class="song-details-div song-details-div-profile">
-                    <h3 class="song-title">In Circles</h3>
+        <!-- <h3 class="recommended releases-profile">Recommended:</h3>
+        <div class="card-container song-card-container">
+            <div class="song-card song-card-left">
+                <image class="song-img" alt="stevie" src="./images/stevie-1.jpg"></image>
+                <button class="song-status-btn queued-status-btn">0 Days - 2 Hours - 5 Minutes</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">Taken Aback</h3>
+                    <p class="artist-name">Stillzy</p>
+                </div>
+            </div>
+            <div class="song-card card-2">
+                <image class="song-img" alt="stevie" src="./images/stevie.jpg"></image>
+                <button class="song-status-btn live-status-btn">LIVE</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">In My Head</h3>
                     <p class="artist-name">Stevie Flowers</p>
                 </div>
-            </div></a>
-        </div>
+            </div>
+        </div> -->
 
     </div>
 
 <!---------------------------------------- Footer ---------------------------------------------------->
 
-<div class="wrap wrapFooter">
+<div class="hide wrap wrapFooter wrapSongFooter">
     <div class="footer-1">
         <div class="footer-badging">
             <image class="footer-logo" alt="tokn-logo" src="./images/footer-logo.png"></image>
@@ -143,7 +202,6 @@
         </div>
     </div>
 </div>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

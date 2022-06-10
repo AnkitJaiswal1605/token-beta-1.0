@@ -9,19 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <title>Tokn Music</title>
 </head>
 <body> 
   
 <!---------------------------------------- Navbar ---------------------------------------------------->
 
-    <div class="navbar">
+    <div id="navbar" class="navbar">
+        <div class="hamburger" onclick="mobileNavbarOpen()">
+            <div class="ham-bar"></div>
+            <div class="ham-bar"></div>
+            <div class="ham-bar"></div>
+        </div>
         <div class="left-navbar">
             <!-- <image class="logo" alt="nav-icon" src="./images/hamburger.png"></image> -->
-            <image class="logo" alt="logo" src="./images/logo.png"></image>
+            <!-- <image class="hamburger" alt="hamburger-icon" src="./images/hamburger.svg" onclick="mobileNavbarOpen()"></image> -->
+            
+            <a href="index.html"><image class="logo" alt="logo" src="./images/logo.png"></image></a>
             <button class="beta">BETA</button>
-            <p class="nav-text">Marketplace</p>
+            <a href="marketplace.html"><p class="nav-text">Marketplace</p></a>
             <p class="nav-text">Whitepaper</p>
         </div>
         <div class="right-navbar">
@@ -31,33 +38,57 @@
 
 <!---------------------------------------- Intro ---------------------------------------------------->
 
-    <div class="wrap wrapIntro">
+    <div id="desktop-intro" class="wrap wrapIntro">
         <div class="introTextContainer">
             <h1>The Music Marketplace</h1>
             <p class="intro-p">Invest in music you love and collect the royalties from your favorite songs.</p>
-            <button class="orangeButton">Start Investing</button>
+            <a href="marketplace.html"><button class="orangeButton">Start Investing</button></a>
         </div>
         <image class="phones-img" alt="phones-img" src="./images/phones.png">
+    </div>
+
+    <div id="mobile-intro" class="wrapMobileIntro">
+        <image class="close-navbar" alt="close" src="./images/close-icon.png" onclick="mobileNavbarClose()"></image>
+        <image class="logo-mobile" alt="logo" src="./images/logo-white-bg.png" onclick="mobileNavbarClose()"></image>
+        <image class="waves" alt="waves" src="./images/waves.png"></image>
+        <div class="menu">
+            <h1 onclick="mobileNavbarClose()">HOME</h1>
+            <a href="marketplace.html"><h1>MARKETPLACE</h1></a>
+            <h1 class="tbd-section"><button class="tbd-btn">TBD</button><span class="opacity-p">LIBRARY</span></h1>
+            <h1 class="tbd-section"><button class="tbd-btn">TBD</button><span class="opacity-p">ABOUT</span></h1>
+        </div>
+        <a href="https://static1.squarespace.com/static/6296b52a4a4dfc43d765122e/t/629d851b65594a574822a66d/1654490418750/Whitepaper.pdf">
+            <button class="whitepaper-btn">WHITEPAPER</button>
+        </a>
     </div>
 
 <!---------------------------------------- Song List ---------------------------------------------------->
 
     <div class="wrap wrapSongList">
         <div class="card-container">
-            <div class="song-card">
-                <image class="song-img" alt="stevie" src="./images/stevie-1.jpg"></image>
-                <button class="song-status-btn queued-status-btn">0 Days - 2 Hours - 5 Minutes</button>
-                <div class="song-details-div">
-                    <h3 class="song-title">Taken Aback</h3>
-                    <p class="artist-name">Stillzy</p>
-                </div>
-            </div>
-            <div class="song-card card-2">
-                <image class="song-img" alt="stevie" src="./images/stevie.jpg"></image>
-                <button class="song-status-btn live-status-btn">LIVE</button>
-                <div class="song-details-div">
-                    <h3 class="song-title">In My Head</h3>
+            
+            
+            <div class="song-card card-1">
+                <a href="in-circles.html"><image class="song-img" alt="stevie" src="./images/in-circles-bg.png"></image></a>
+                <a href="in-circles.html"><button class="song-status-btn live-status-btn">LIVE</button></a>
+                <a href="in-circles.html"><div class="song-details-div">
+                    <h3 class="song-title">In Circles</h3>
                     <p class="artist-name">Stevie Flowers</p>
+                </div></a>
+            </div>
+
+            <div class="song-card card-2">
+                <div class="song-img">
+                    <div class="bar-container">
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                    </div>
+                </div>
+                <button class="song-status-btn">COMING SOON</button>
+                <div class="song-details-div">
+                    <h3 class="song-title">-</h3>
+                    <p class="artist-name">????</p>
                 </div>
             </div>
             <div class="song-card card-3">
@@ -90,7 +121,7 @@
             </div>
         </div>
 
-        <button class="show-all-btn">Show All</button>
+        <a href="in-circles.html"><button class="show-all-btn">Show All</button></a>
     </div>
 
 <!---------------------------------------- Vote ---------------------------------------------------->
@@ -124,7 +155,11 @@
 
 <!---------------------------------------- About ---------------------------------------------------->
 
-    <div class="wrap wrapAbout">
+<div class="video-container">
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/0GfXuk5k2mY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+</div>
+
+<div class="wrap wrapAbout">
         <h1 class="about-header">WHAT IS TOKN MUSIC</h1>
         <p class="about-p">Well, we are a...</p>
 
@@ -191,7 +226,7 @@
 
 <!---------------------------------------- Apply ---------------------------------------------------->
 
-    <div class="wrap wrapApply">
+    <!-- <div class="wrap wrapApply">
         <image class="artist-apply-img" alt="artist" src="./images/artist-apply.jpg"></image>
         <div class="apply-left">
             <h2 class="artist-ad-header">Are you an artist?</h2>
@@ -247,7 +282,7 @@
             <button class="apply-submit-btn">Submit</button>
 
         </div>
-    </div>
+    </div> -->
 
 <!---------------------------------------- Media ---------------------------------------------------->
 
@@ -278,21 +313,51 @@
         <h2 class="faq-header">Frequently Asked Questions:</h2>
         <hr class="hor-line">
         <div class="single-faq">
-            <h5 class="faq-question">Why would an artist join Tokn Music?</h5>
-            <i class="fas fa-angle-down"></i>
+            <h5 class="faq-question">What makes Tokn Music different?</h5>
+            <i class="fas fa-angle-down" id="ad1" onclick="faq1Open(); faq2Close(); faq3Close(); faq4Close(); faq5Close(); faq6Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au1" onclick="faq1Close()"></i>            
         </div>
+        <div class="faq-answer" id="ans1">Tokn Music is building the worlds best NFT marketplace that provides investors real intrinsic value without the gas prices or crypto confusion.</div>
         <hr class="hor-line">
 
         <div class="single-faq">
-            <h5 class="faq-question">When do token holders receive royalty payments?</h5>
-            <i class="fas fa-angle-down"></i>
+            <h5 class="faq-question">What do artists get?</h5>
+            <i class="fas fa-angle-down" id="ad2" onclick="faq2Open(); faq1Close(); faq3Close(); faq4Close(); faq5Close(); faq6Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au2" onclick="faq2Close()"></i>            
         </div>
+        <div class="faq-answer" id="ans2">Artists can earn upfront capital and passive income from their streaming royalties without forfeiting copyrights, control, and creativity.</div>
         <hr class="hor-line">
 
         <div class="single-faq">
-            <h5 class="faq-question">How do tokens get lifetime royalties?</h5>
-            <i class="fas fa-angle-down"></i>
+            <h5 class="faq-question">What do investors get?</h5>
+            <i class="fas fa-angle-down" id="ad3" onclick="faq3Open(); faq2Close(); faq1Close(); faq4Close(); faq5Close(); faq6Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au3" onclick="faq3Close()"></i>            
         </div>
+        <div class="faq-answer" id="ans3">Investors purchase a percentage of streaming royalties through tokens which can be sold at an appreciated price.</div>
+        <hr class="hor-line">
+
+        <div class="single-faq">
+            <h5 class="faq-question">How do I buy tokens?</h5>
+            <i class="fas fa-angle-down" id="ad4" onclick="faq4Open(); faq2Close(); faq3Close(); faq1Close(); faq5Close(); faq6Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au4" onclick="faq4Close()"></i>            
+        </div>
+        <div class="faq-answer" id="ans4">Right now, tokens are being listed and sold on Opensea until the launch of our marketplace.</div>
+        <hr class="hor-line">
+
+        <div class="single-faq">
+            <h5 class="faq-question">What are tokens?</h5>
+            <i class="fas fa-angle-down" id="ad5" onclick="faq5Open(); faq2Close(); faq3Close(); faq4Close(); faq1Close(); faq6Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au5" onclick="faq5Close()"></i>            
+        </div>
+        <div class="faq-answer" id="ans5">Each token holds a percentage of a streaming royalties and be exchanged between investors. Additionally, tokens are a ticket to launch - if you are holding a token at launch, you get early access.</div>
+        <hr class="hor-line">
+
+        <div class="single-faq">
+            <h5 class="faq-question">When do investors receive royalties?</h5>
+            <i class="fas fa-angle-down" id="ad6" onclick="faq6Open(); faq2Close(); faq3Close(); faq4Close(); faq5Close(); faq1Close();"></i>
+            <i class="fas fa-angle-down angle-up" id="au6" onclick="faq6Close()"></i>            
+        </div>
+        <div class="faq-answer" id="ans6">Investors receive royalties at our launch date. Whoever holds a token at launch will receive the lump sum of royalties earned from that designated token.</div>
         <hr class="hor-line">
     </div>
 
@@ -310,33 +375,36 @@
                 and investors through our order matching engined marketplace.
             </p>
             <div class="social-media-icons">
-                <image class="social-icon" alt="social-icon" src="./images/twitter.png"></image>
-                <image class="social-icon instagram" alt="social-icon" src="./images/insta.png"></image>
-                <image class="social-icon" alt="social-icon" src="./images/medium.png"></image>
-                <image class="social-icon linkedin" alt="social-icon" src="./images/linkedin.png"></image>
+                <a href="https://twitter.com/toknmusicapp"><image class="social-icon" alt="social-icon" src="./images/twitter.png"></image></a>
+                <a href="https://www.instagram.com/toknmusicapp/"><image class="social-icon instagram" alt="social-icon" src="./images/insta.png"></image></a>
+                <a href="https://medium.com/tokn-music"><image class="social-icon" alt="social-icon" src="./images/medium.png"></image></a>
+                <a href="https://www.linkedin.com/company/tokn-music/mycompany/"><image class="social-icon linkedin" alt="social-icon" src="./images/linkedin.png"></image></a>
             </div>
         </div>
         <div class="footer-2">
-            <h6 footer-header>Site Nav</h6>
-            <p>Marketplace</p>
-            <p>Home</p>
-            <p>Explanation</p>
-            <p>About Us</p>
-            <p>Create an Account</p>
+            <!-- <h6 footer-header>Site Nav</h6> -->
+            <p>Artist Application</p>
+            <a href="index.html"><p>Home</p></a>
+            <a href="marketplace.html"><p>Marketplace</p></a>
         </div>
         <div class="footer-3">
-            <h6 footer-header>Resources</h6>
-            <p>Whitepaper</p>
+            <!-- <h6 footer-header>Resources</h6> -->
+            <a href="https://static1.squarespace.com/static/6296b52a4a4dfc43d765122e/t/629d851b65594a574822a66d/1654490418750/Whitepaper.pdf"><p>Whitepaper</p></a>
             <p>Pitch</p>
-            <p>Tokenomics</p>
+            <a href="https://open.spotify.com/show/36ybFZAg8AevQhuEVa8q1V"><p>Podcast</p></a>
         </div>
-        <div class="footer-4">
+        <!-- <div class="footer-4">
             <h6 footer-header>Contact</h6>
             <p>support@toknmusic.com</p>
             <p>1111 Address Street City, ST Country 00000</p>
-        </div>
+        </div> -->
+        <a href = "mailto: support@toknmusic.com"><p class="support-email">support@toknmusic.com</p></a>
         <div class="terms-of-use">
-            <span class="trademark">&#xae;</span> Tokn Music is a Delaware C Corp, All Rights Reserved | <span class="blue-text">Terms of Use</span> | <span class="blue-text">Privacy Policy</span>
+            <div class="terms-container">
+                <span class="trademark">&#xae;</span>Tokn Music is a Delaware C Corp, All Rights Reserved | 
+                <a href = "https://static1.squarespace.com/static/6296b52a4a4dfc43d765122e/t/62a2dc67b2d3d50b7930574c/1654840423223/Terms+of+Use.pdf"><span class="blue-text">Terms of Use</span></a> | 
+                <a href = "https://static1.squarespace.com/static/6296b52a4a4dfc43d765122e/t/62a2dc3f2a04e96d2e09ae6a/1654840383944/Marketplace+Agreement.pdf"><span class="blue-text">Marketplace Agreement</span></a>
+            </div>
         </div>
     </div>
 
