@@ -1,5 +1,5 @@
-Moralis.initialize("7HsV4TcX1Gic7Z6YJvs06ZjMrwW23IvyPrxVUPOw"); // Application id from moralis.io 
-Moralis.serverURL = "https://yaprbh5q0fg7.usemoralis.com:2053/server"; //Server url from moralis.io
+Moralis.initialize("https://ohlxu0dku5eo.usemoralis.com:2053/server"); // Application id from moralis.io 
+Moralis.serverURL = "https://ohlxu0dku5eo.usemoralis.com:2053/server"; //Server url from moralis.io
 
 init = async () => {
     window.web3 = await Moralis.enableWeb3();
@@ -8,6 +8,7 @@ init = async () => {
 login = async () => {
     try {
         await Moralis.Web3.authenticate();
+        document.getElementById("btnConnect").innerHTML = "Connected";
     } catch (error) {
         alert(error);
     }
@@ -131,14 +132,21 @@ mobileNavbarOpen2 = () => {
     }
 }
 
-mobileNavbarClose2 = () => {
-    document.getElementById("mobile-intro2").style.display = "none";
-    document.getElementById("navbar2").style.display = "flex";
-    var x = document.getElementsByClassName("hide");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = 'flex';
-    }
+mobileNavbarOpen3 = () => {
+    document.getElementById("mobile-intro3").style.display = "flex";
+    document.getElementById("navbar3").style.display = "none";
+    document.getElementsByClassName("image-container")[0].style.display = "none";
+    document.getElementsByClassName("right-section")[0].style.display = "none";
+    document.getElementsByClassName("wrapFooter")[0].style.display = "none";
+}
+
+mobileNavbarOpen4 = () => {
+    document.getElementById("mobile-intro4").style.display = "flex";
+    document.getElementById("navbar4").style.display = "none";
+    document.getElementsByClassName("banner")[0].style.display = "none";
+    document.getElementsByClassName("banner-layer")[0].style.display = "none";
+    document.getElementsByClassName("wrapSongList")[0].style.display = "none";
+    document.getElementsByClassName("wrapFooter")[0].style.display = "none";
 }
 
 const userConnectButton = document.getElementById("btnConnect");

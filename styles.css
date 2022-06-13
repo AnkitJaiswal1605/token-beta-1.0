@@ -16,7 +16,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    min-height: 40rem;
+    min-height: 20rem;
 }
 
 /****************************************** Navbar **************************************************/
@@ -175,13 +175,14 @@ h1 {
     right: 12vw;
 }
 
-.wrapMobileIntro, .wrapMobileIntro2 {
+.wrapMobileIntro, .wrapMobileIntro2, .wrapMobileIntro2, .wrapMobileIntro2 {
     background-image: linear-gradient(to left, #00C9FF 0%, #2FB2FF 38%, #2A8EFE 61%, #006DEF 100%);
     display: none;
     width: 100vw !important;
     height: 100vh;
-    min-height: 40rem;
+    min-height: 20rem;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .close-navbar {
@@ -241,7 +242,7 @@ h1 {
 }
 
 .whitepaper-btn {
-    position: absolute;
+    position: fixed;
     width: 90vw;
     height: 2.5rem;
     padding-top: 4px;
@@ -255,7 +256,7 @@ h1 {
 }
 
 .waves {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     bottom: 0vw;
     height: 50vh;
@@ -1453,6 +1454,14 @@ h1 {
     font-weight: 600;
 }
 
+.table-hor-line {
+    width: 85vw;
+    height: 0.05rem;
+    background-color: black;
+    border-style: none;
+    opacity: 0.7;
+}
+
 .buy-btn {
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -1462,6 +1471,7 @@ h1 {
     width: 11rem;
     height: 2.5rem;
     border-radius: 5px;
+    border-style: none;
     cursor: pointer;
 }
 
