@@ -94,6 +94,13 @@ body {
     margin-top: 3rem;
 }
 
+.logout {
+    margin-right: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+    display: none;
+}
+
 .signup-btn {
     background-color: black;
     border-style: none;
@@ -1455,7 +1462,7 @@ h1 {
 }
 
 .table-hor-line {
-    width: 85vw;
+    /* width: 85vw; */
     height: 0.05rem;
     background-color: black;
     border-style: none;

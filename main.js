@@ -1,14 +1,25 @@
-Moralis.initialize("https://ohlxu0dku5eo.usemoralis.com:2053/server"); // Application id from moralis.io 
-Moralis.serverURL = "https://ohlxu0dku5eo.usemoralis.com:2053/server"; //Server url from moralis.io
+Moralis.initialize("QBsoz1LaJnsqskZQY9iadLtDEg19LVHdVOg13lpe"); // Application id from moralis.io 
+Moralis.serverURL = "https://1xyt3yzbhbob.usemoralis.com:2053/server"; //Server url from moralis.io
 
 init = async () => {
     window.web3 = await Moralis.enableWeb3();
+    user = Moralis.User.current();
+    if(user) {
+        console.log("123");
+        account = user.attributes.ethAddress;
+        document.getElementsByClassName("signup-btn")[0].innerHTML = account.substring(0,5) + "..." + account.substring(37,42);
+        document.getElementsByClassName("logout")[0].style.display = "flex";
+    }
 }
+
 
 login = async () => {
     try {
         await Moralis.Web3.authenticate();
-        document.getElementById("btnConnect").innerHTML = "Connected";
+        user = Moralis.User.current();
+        account = user.attributes.ethAddress;
+        document.getElementsByClassName("signup-btn")[0].innerHTML = account.substring(0,5) + "..." + account.substring(37,42);
+        document.getElementsByClassName("logout")[0].style.display = "flex";
     } catch (error) {
         alert(error);
     }
@@ -16,17 +27,19 @@ login = async () => {
 
 logout = async () => {
     await Moralis.User.logOut();
+    document.getElementsByClassName("signup-btn")[0].innerHTML = "Connect wallet";
+    document.getElementsByClassName("logout")[0].style.display = "none";
 }
 
-buy = async () => {
+// buy = async () => {
     
-    if (await Moralis.User.current()){
-       window.open('https://testnets.opensea.io/');
-    } else {
-        alert("Please connect wallet");
-    }
+//     if (await Moralis.User.current()){
+//        window.open('https://testnets.opensea.io/');
+//     } else {
+//         alert("Please connect wallet");
+//     }
         
-}
+// }
 
 faq1Open = () => {
     document.getElementById("ad1").style.display = "none";
@@ -149,13 +162,12 @@ mobileNavbarOpen4 = () => {
     document.getElementsByClassName("wrapFooter")[0].style.display = "none";
 }
 
-const userConnectButton = document.getElementById("btnConnect");
+const userConnectButton = document.getElementsByClassName("signup-btn")[0];
 userConnectButton.onclick = login;
 
-const logoutButton = document.getElementById("logout");
+const logoutButton = document.getElementsByClassName("logout")[0];
 logoutButton.onclick = logout;
 
-const buyBtn = document.getElementById("buy-btn");
-buyBtn.onclick = buy;
+// const buyBtn = document.getElementById("buy-btn");
+// buyBtn.onclick = buy;
 
-init();
