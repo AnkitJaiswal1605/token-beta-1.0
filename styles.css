@@ -1634,6 +1634,10 @@ a {
     border-radius: 100%;
 }
 
+.stevie-top-img {
+    left: 8vw !important;
+}
+
 .artist-right-sec {
     left: 32vw;
     top: 8rem;
