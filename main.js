@@ -1,5 +1,5 @@
-Moralis.initialize("3JVVz5Lh5DmELW4paMcA6FXuHrmnZodoG7zqVGXJ"); // Application id from moralis.io 
-Moralis.serverURL = "https://jilh67x91ewd.usemoralis.com:2053/server"; //Server url from moralis.io
+Moralis.initialize("ybfDR88HW8eS1UR5PNcGATmxtPwrmRPFWuIY1Maw"); // Application id from moralis.io 
+Moralis.serverURL = "https://yafxlxlkik8b.usemoralis.com:2053/server"; //Server url from moralis.io
 
 init = async () => {
     window.web3 = await Moralis.enableWeb3();
