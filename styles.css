@@ -138,6 +138,7 @@ body {
 .wrapIntro {
     background-image: linear-gradient(to left, #00C9FF 0%, #2FB2FF 38%, #2A8EFE 61%, #006DEF 100%);
     position: relative;
+    /* max-height: 100vw; */
 }
 
 .introTextContainer {
@@ -267,6 +268,15 @@ h1 {
     width: 100vw;
     bottom: 0vw;
     height: 50vh;
+}
+
+@media (min-width: 700px) {
+    .wrapIntro {
+        max-height: 100vw;
+    }
+    .introTextContainer {
+        height: 10rem;
+    }
 }
 
 @media (max-width: 930px) {
@@ -735,7 +745,7 @@ h1 {
         margin-top: 2rem;
     }
     .wrapAbout {
-        height: 250vh;
+        height: 120rem;
         justify-content: center;
         min-height: 48rem;
         padding-top: 13rem;
